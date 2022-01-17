@@ -1,27 +1,22 @@
-# AngularInterviewCode
+## Instructions:
+Very simple set of tasks to show basic working knowledge of angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.14.
+### Setup
+- pull repo
+- npm i
+- npm start
+- notice that you can navigate to localhost:4200/assets/response.json and see some JSON
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Tasks to do:
+- create an angular service that implements a function called getResponse() which makes an HTTP call and returns an observable of the assets/response.json response
+- inject the service into AppComponent, and make the function call when the component initializes
+- declare a string variable in AppComponent called backgroundColor
+- when the response returns, set the backgroundColor to the first item in the availableColors array
+- in the AppComponent template, use an angular inline style declaration to set the background color of the div.main to the backgroundColor variable
+- create a ColorPickerComponent
+  - inputs: availableColors (string[]) and currentColor (string)
+  - outputs: onColorChange (string)
+- in the ColorPickerComponent, render a button for each color in availableColors. when the user clicks one of the buttons, emit the color via to the parent component via onColorChange
+- In AppComponent, listen to the onColorChange output and update backgroundColor accordingly
+- BONUS: in ColorPickerComponent, render the button that matches currentColor slightly differently.
+- BONUS (question): what is the ControlValueAccessor interface, and how could it be helpful here?

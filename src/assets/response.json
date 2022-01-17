@@ -1,5 +1,5 @@
 {
-    "colors": [
+    "availableColors": [
         "green", "orange", "blue", "puple", "red"
     ]
 }
